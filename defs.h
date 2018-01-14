@@ -118,8 +118,11 @@ void            setproc(struct proc*);
 void            sleep(void*, struct spinlock*);
 void            userinit(void);
 int             wait(void);
+int             waitx(int *,int *);
 void            wakeup(void*);
 void            yield(void);
+int             cps(void);
+int             set_priority(int pid, int priority);
 
 // swtch.S
 void            swtch(struct context**, struct context*);
